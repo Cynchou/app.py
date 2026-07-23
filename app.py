@@ -31,11 +31,7 @@ st.header("Immersive Journey Highlights")
 # Mock Data
 journey_stages = ["Sensory Awakening", "Deep Interaction", "Emotional Resonance"]
 avg_stay = [8, 15, 12]
-
-# minutes
 satisfaction = [4.5, 4.9, 4.8]
-
-# score out of 5
 
 # Create Plotly Chart
 fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -44,9 +40,9 @@ fig.add_trace(go.Bar(
     x=journey_stages,
     y=avg_stay,
     name="Avg Stay (min)",
-    marker_color='
+    marker_color="
 
-# 1a1a1a',
+# 1a1a1a",
     opacity=0.8
 ), secondary_y=False)
 
@@ -54,11 +50,11 @@ fig.add_trace(go.Scatter(
     x=journey_stages,
     y=satisfaction,
     name="Satisfaction Score",
-    marker_color='
+    marker_color="
 
-# C5A065',
+# C5A065",
     line=dict(width=4),
-    mode='lines+markers'
+    mode="lines+markers"
 ), secondary_y=True)
 
 fig.update_layout(
@@ -67,8 +63,10 @@ fig.update_layout(
     yaxis_title="Average Stay (Minutes)",
     yaxis2_title="Satisfaction Score (out of 5)",
     height=400,
-    template="plotly_white")
-    st.plotly_chart(fig, use_container_width=True)
+    template="plotly_white"
+)
+
+st.plotly_chart(fig, use_container_width=True)
 
 # --- 3. Bottom Section: The Impact ---
 st.header("Impact & Voices")
@@ -83,7 +81,7 @@ with c2:
     st.metric(label="Social Mentions", value="300+", delta="+200%")
 with c3:
     st.metric(label="Conversion Lift", value="15%", delta="+5%")
-    with col_right:
+with col_right:
 st.markdown("💬 Visitor Voices")
 st.markdown("""
 <div class="quote-box">
@@ -98,9 +96,8 @@ st.markdown("""
 <small>- Mr. Zhang, KOL</small>
 </div>
 """, unsafe_allow_html=True)
-
-# --- Sidebar: Interactive Settings ---
+--- Sidebar: Interactive Settings ---
 with st.sidebar:
-    st.header("Report Settings")
-    nps_score = st.slider("NPS Score", 0, 100, 78)
-    st.write(f"Current NPS: **{nps_score}**")
+st.header("Report Settings")
+nps_score = st.slider("NPS Score", 0, 100, 78)
+st.write(f"Current NPS: {nps_score}")
