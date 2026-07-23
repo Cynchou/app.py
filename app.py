@@ -92,9 +92,7 @@ st.markdown("""
 <small>- Mr. Zhang, KOL</small>
 </div>
 """, unsafe_allow_html=True)
-st.markdown("""
-<div class="quote-box" style="margin-top: 10px;">
-"The VR part was shocking. I couldn't help but share it."<br>
-<small>- Mr. Zhang, KOL</small>
-</div>
-""", unsafe_allow_html=True)
+with st.sidebar:
+st.header("Report Settings")
+nps_score = st.slider("NPS Score", 0, 100, 78)
+st.write(f"Current NPS: {nps_score}")
