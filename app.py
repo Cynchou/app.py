@@ -69,7 +69,7 @@ st.header("Impact & Voices")
 col_left, col_right = st.columns([2, 1])
 
 with col_left:
-st.markdown("📈 Business Impact")
+    st.markdown("📈 Business Impact")
 c1, c2, c3 = st.columns(3)
 with c1:
     st.metric(label="Leads Generated", value="120+", delta="+15%")
@@ -78,7 +78,7 @@ with c2:
 with c3:
     st.metric(label="Conversion Lift", value="15%", delta="+5%")
 with col_right:
-st.markdown("💬 Visitor Voices")
+    st.markdown("💬 Visitor Voices")
 st.markdown("""
 <div class="quote-box">
 "I finally understood why it's worth the price. It's about respect."<br>
