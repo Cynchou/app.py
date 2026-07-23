@@ -92,7 +92,6 @@ st.markdown("""
 <small>- Mr. Zhang, KOL</small>
 </div>
 """, unsafe_allow_html=True)
---- Sidebar: Interactive Settings ---
 with st.sidebar:
 st.header("Report Settings")
 nps_score = st.slider("NPS Score", 0, 100, 78)
