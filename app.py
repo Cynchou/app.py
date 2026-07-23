@@ -93,6 +93,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 with st.sidebar:
-st.header("Report Settings")
+    st.header("Report Settings")
 nps_score = st.slider("NPS Score", 0, 100, 78)
 st.write(f"Current NPS: {nps_score}")
