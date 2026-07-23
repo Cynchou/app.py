@@ -40,9 +40,7 @@ fig.add_trace(go.Bar(
     x=journey_stages,
     y=avg_stay,
     name="Avg Stay (min)",
-    marker_color="
-
-# 1a1a1a",
+    marker_color="# 1a1a1a",
     opacity=0.8
 ), secondary_y=False)
 
@@ -50,9 +48,7 @@ fig.add_trace(go.Scatter(
     x=journey_stages,
     y=satisfaction,
     name="Satisfaction Score",
-    marker_color="
-
-# C5A065",
+    marker_color="# C5A065",
     line=dict(width=4),
     mode="lines+markers"
 ), secondary_y=True)
